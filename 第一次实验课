@@ -1,0 +1,39 @@
+#练习1
+x<-c(1:1000) #给变量x分配从1到1000的数字向量
+y<-c(atan(1/x)) #给变量y分配向量x的倒数的反正切值
+z<-c(1/tan(y)) #给变量z分配y的切线的倒数
+
+#练习2
+x==z #判断x是否等于z
+identical(x,z) #判断x是否严格相等于z
+all.equal(x,z) #判断x是否相似相等于z
+all.equal(x,z,2) #判断当容错度为2时x是否等于z
+all.equal(x,z,0) #判断当容错度为0时x是否等于z
+
+#练习3
+true_and_missing<-c(TRUE,NA) #给变量true_and_missing分配(TRUE,NA)的向量
+false_and_missing<-c(FALSE,NA) #给变量false_and_missing分配(FALSE,NA)的向量
+mixed<-c(TRUE,FALSE,NA) #给变量mixed分配(TRUE,FALSE,NA)的向量
+any(true_and_missing) #判断true_and_missing是否有TRUE
+any(false_and_missing) #判断false_and_missing是否有TRUE
+any(mixed) #判断mixed是否有TRUE
+all(true_and_missing) #判断true_and_missing是否有全为TRUE
+all(false_and_missing) #判断false_and_missing是否有全为TRUE
+all(mixed) #判断mixed是否有全为TRUE
+
+#练习4
+#(1)
+x<-sample(50:1000,100) #给变量x随机分配100个从50到1000的数字向量
+sum(x) #求变量x中元素的加和
+median(x) #求变量x中元素的中位数
+mean(x) #求变量x中元素的平均数
+var(x) #求变量x中元素的方差
+
+#(2)
+y=atan(1000) #给y赋值1000的反正切值
+z=pi*(y/2)**2 #定义以y为直径的圆的面积公式，并赋值给z
+
+#(3)
+a<-c(2,3) #给变量a分配（2，3）的数字变量
+b<-c(13,22) #给变量b分配（13，22）的数字变量
+p=sqrt((a[1]-b[1])**2+(a[2]-b[2])**2) #定义欧氏距离公式，并赋值给z
